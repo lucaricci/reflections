@@ -1,0 +1,29 @@
+What happens when you initialize a repository? Why do you need to do it?
+	A .git folder containing all metadata used by git is created. You need to do it because otherwise git won't be able
+	to track your changes.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+	It is different because it only "contains" the files you decided to commit, this is important because it offers you
+	a possibility of choosing which files you want to add to a commit.
+
+How can you use the staging area to make sure you have one commit per logical change?
+	You can use git diff to compare what changes has been made and then decide which file to commit.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+	Branches would be helpful when you want to make a change to the logic of you application, if you want to fix a bug 
+	or simply want to update your documentation. They would help because if something wrong happen, for instance 
+	something that might break your code, you will leave your working application untouched and you can experiment 
+	changes into a branch.
+
+How do the diagrams help you visualize the branch structure?
+	They help you figure out which commits belong to which branch, making it easier to read the history of each 
+	branch and understand which commits are unrelated each other.
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+	We now have one branch which contains all the commits made for coins branch and master branch ordered by timestamp.
+	Because with two merged branches we're able to show the history with both branches commits included.
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+	If the changes don't affect the same lines on the same files then git automatic merging is really useful, you don't
+	have to go file to file line to line searching for the differences because git does the job for you. But in case 
+	there are conflicts git couldn't know which changes to keep so you have to go manually.
